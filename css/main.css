@@ -51,7 +51,7 @@ h3 {
 p {
 	font-size: 0.875em;
 	line-height: 21px;
-    padding: 0 30px;
+    
 }
 
 /*The widths are in a percentage!*/
@@ -113,26 +113,17 @@ header nav ul li a{
 	font-size: 1em;
 	line-height: 25px;
 }
-
+.bottom-section {
+	border-top: 1px solid #eee;
+	width: 90%;
+}
 .section-one,
 .section-two,
 .section-three {
 	height: auto;
 	border-top: 1px solid #eee;
-}
-
-.section-one h3 {
-	padding: 10px 0;
-}
-
-.section-two {
-	border-left: 1px solid #eee;
-	border-right: 1px solid #eee;
-}
-
-.section-two h3,
-.section-three h3 {
-	padding: 10px 30px;
+	width: 90%;
+	
 }
 
 .menu {
@@ -160,10 +151,60 @@ footer {
 	border-top: 3px solid #eee;
 	margin: 0 auto;
 	text-align: center;
+	width: 90%;
 } 
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+/*******For screens 768px and larger*******/
+@media all and (min-width:768px) {
+	.bottom-section{
+		justify-content: space-between;
+		align-items: flex-start;
+		
+	}
+	.section-one,
+	.section-two,
+	.section-three {
+		
+		flex-basis:30%;
+	}
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	.section-one {
+		padding: 10px 0;
+	}
+	
+	.section-two,
+	.section-three {
+		padding: 10px 10px;
+	}
+}
+
+
+/*******For screens 1200px and larger *******/
+@media all and (min-width:1200px) {
+	header {
+		justify-content: space-between;
+	}
+	header h1 {
+		width: 30%;
+		padding: 30, 0px;
+		border-bottom: none;
+		text-align: left;
+	}
+	header nav {
+		width: 40%;
+		display: flex;
+		display: inline-block;
+	}
+	header nav ul {
+		display: flex;
+		justify-content: space-between;
+	}
 }
